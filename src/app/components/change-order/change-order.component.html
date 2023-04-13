@@ -1,0 +1,56 @@
+<div style="padding-top: 25px" class="middle_position">
+  <div class="main_form" style="width: 1200px">
+    <div class="middle_elements">
+      <div class="preview" style="display: flex; justify-content: flex-start;">
+        <h1 class="data_item">Name:</h1>
+        <mat-form-field class="example-form-field">
+          <mat-label>Clearable input</mat-label>
+          <input matInput type="text" [(ngModel)]="value3">
+          <button *ngIf="value3" class="mat-raised-button has-content" matSuffix mat-icon-button aria-label="Clear" (click)="value3=''">
+            <mat-icon>close</mat-icon>
+          </button>
+          <button *ngIf="!value3" class="mat-raised-button" matSuffix mat-icon-button aria-label="Clear">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+        <h1 class="data_item">Name:</h1>
+        <mat-form-field class="example-form-field">
+          <mat-label>Clearable input</mat-label>
+          <input matInput type="text" [(ngModel)]="value4">
+          <button *ngIf="value4" class="mat-raised-button has-content" matSuffix mat-icon-button aria-label="Clear" (click)="value4=''">
+            <mat-icon>close</mat-icon>
+          </button>
+          <button *ngIf="!value4" class="mat-raised-button" matSuffix mat-icon-button aria-label="Clear">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+        <h1 class="data_item">Name:</h1>
+        <mat-form-field class="example-form-field">
+          <mat-label>Clearable input</mat-label>
+          <input matInput type="text" [(ngModel)]="value5">
+          <button *ngIf="value5" class="mat-raised-button has-content" matSuffix mat-icon-button aria-label="Clear" (click)="value5=''">
+            <mat-icon>close</mat-icon>
+          </button>
+          <button *ngIf="!value5" class="mat-raised-button" matSuffix mat-icon-button aria-label="Clear">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div style="margin-right: 50px; padding-top: 30px;">
+        <div class="table-container" style="border: 3px solid red; border-radius: 10px;">
+          <div class="form-container" style="width: 1000px">
+            <div style="height: 40px">
+              <app-change-items (click)="Opa()"></app-change-items>
+              <app-change-items></app-change-items>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: row-reverse; padding: 47px">
+        <button mat-raised-button style="background: red">Удалить</button>
+        <button mat-raised-button style="margin-right: 50px; background: green">Сохранить</button>
+        <button mat-raised-button type="button" style="margin-right: 50px; background: orange">Добавить</button>
+      </div>
+    </div>
+  </div>
+</div>

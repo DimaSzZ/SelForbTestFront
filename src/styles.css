@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.middle_position {
+  text-align: center;
+}
+
+.main_form {
+  display: inline-block;
+  height: 600px;
+  width: 1000px;
+  background: gray;
+  border-radius: 30px;
+}
+.middle_elements{
+  padding-left: 100px;
+}
+.table-container {
+  height: 300px;
+  overflow-y: auto;
+}
+.form-container {
+  background-color: #e5e5e5;
+  border-radius: 7px;
+  padding: 20px;
+  width: 800px;
+  min-height: 300px;
+}

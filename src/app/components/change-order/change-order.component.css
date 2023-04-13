@@ -1,0 +1,14 @@
+.preview {
+  background: linear-gradient(blue, pink);
+  width: 1000px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+

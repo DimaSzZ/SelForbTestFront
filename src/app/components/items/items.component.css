@@ -1,0 +1,19 @@
+.item {
+  background: darkgrey;
+  width: 760px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.data_item {
+  padding-top: 15px;
+  flex: 1;
+}

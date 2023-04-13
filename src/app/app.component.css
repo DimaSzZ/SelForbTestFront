@@ -1,0 +1,44 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+nav{
+  height: 70px;
+  background-color: #333;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.main{
+  padding-left: 150px;
+  padding-right: 150px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  transform: translateX(-150px);
+}
+.side_panel{
+  height: 600px;
+  width: 400px;
+  background: #c0c0c0;
+}
+.component_form{
+  padding-left: 30px;
+  padding-top: 20px;
+}
+.table-container {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid black;
+}
+.form-container {
+  background-color: #e5e5e5;
+  padding: 20px 10px;
+  width: 800px;
+  min-height: 2px;
+}
+.add-button{
+  padding-left: 790px;
+}
+.app-small-order {
+  margin-top: 10px;
+}
+

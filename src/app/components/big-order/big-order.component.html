@@ -1,0 +1,19 @@
+<div *ngIf="!router.url.includes('/change-order')" style="padding-top: 25px" class="middle_position">
+ <div class="main_form">
+   <div class="middle_elements">
+     <app-small-order [orderComponent]="order"></app-small-order>
+     <div style=" margin-right: 50px; padding-top: 30px;">
+       <div class="table-container" style="border: 3px solid red; border-radius: 10px;">
+         <div class="form-container" >
+           <app-items [routerLink]="['/open-order', 'zxc', 'change-order']"></app-items>
+         </div>
+       </div>
+   </div>
+     <div style="display: flex; flex-direction: row-reverse; padding: 47px">
+       <button mat-raised-button style="background: red">Удалить</button>
+       <button mat-raised-button style="margin-right: 50px; background: yellow">Редактировать</button>
+     </div>
+ </div>
+</div>
+</div>
+<router-outlet></router-outlet>

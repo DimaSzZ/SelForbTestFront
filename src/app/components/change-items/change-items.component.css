@@ -1,0 +1,8 @@
+.data_input{
+  display: flex;
+  padding-left:10px
+}
+.mat-raised-button.has-content {
+  width: 48px;
+}
+
