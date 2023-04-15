@@ -1,6 +1,6 @@
 export interface Order{
   id: number,
   number: string,
-  date: string,
+  date: string ,
   providerId: number
 }

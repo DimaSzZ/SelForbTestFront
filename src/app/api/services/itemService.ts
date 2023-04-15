@@ -18,7 +18,7 @@ export class ItemService{
     return this.http.post<string>('https://localhost:7284/api/item/save-items',data);
   }
   deleteItems(id:number){
-    return this.http.delete<any>(`https://localhost:7284/api/item/save-items/${id}`);
+    return this.http.delete<any>(`https://localhost:7284/api/item/delete-item/${id}`);
   }
   getOrderItems(id:number) : Observable<Item[]>{
     return this.http.get<Item[]>(`https://localhost:7284/api/item/get-concrete-order-items/${id}`);

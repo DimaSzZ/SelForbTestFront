@@ -20,6 +20,7 @@ import { ChangeItemsComponent } from './components/change-items/change-items.com
 import {MatIconModule} from "@angular/material/icon";
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
+import { CreateOrderComponent } from './components/create-order/create-order.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {CommonModule} from "@angular/common";
     BigOrderComponent,
     ChangeOrderComponent,
     ItemsComponent,
-    ChangeItemsComponent
+    ChangeItemsComponent,
+    CreateOrderComponent
   ],
   imports: [
     BrowserModule,

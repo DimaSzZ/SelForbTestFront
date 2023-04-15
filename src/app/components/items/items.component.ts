@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Item} from "../../api/models/item";
 
 @Component({
   selector: 'app-items',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./items.component.css']
 })
 export class ItemsComponent {
-
+  @Input() itemComponent: Item;
 }

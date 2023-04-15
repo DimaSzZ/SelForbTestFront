@@ -1,65 +1,71 @@
 <nav>
   <h1>Тестовое задание</h1>
 </nav>
-<div *ngIf="!router.url.startsWith('/open-order')" class="main">
-  <form class="side_panel">
-    <div class="component_form">
-      <mat-form-field appearance="fill">
-        <mat-label>Providers</mat-label>
-        <mat-select [(ngModel)]="selectedProvider" name="selectedProvider">
-          <mat-option *ngFor="let provider of providers" [value]="provider">
-            {{provider.name}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-
-    </div>
-    <div class="component_form">
-      <mat-form-field class="example-full-width">
-        <mat-label>Номер заказа</mat-label>
-        <input [(ngModel)]="filterRequest.number" name="number" matInput placeholder="Введите номер заказа">
-      </mat-form-field>
-    </div>
-    <div class="component_form">
-      <mat-form-field class="example-full-width">
-        <mat-label>Имя элемента заказа</mat-label>
-        <input [(ngModel)]="filterRequest.productName" name="productName" matInput placeholder="Введите имя элемента заказа">
-      </mat-form-field>
-    </div>
-    <div class="component_form">
-      <mat-form-field class="example-full-width">
-        <mat-label>Unit элемента заказа</mat-label>
-        <input matInput [(ngModel)]="filterRequest.unit" name="unit" placeholder="Введите Unit элемента">
-      </mat-form-field>
-    </div>
-    <div class="component_form">
-      <mat-form-field appearance="fill">
-        <mat-label>Enter a date range</mat-label>
-        <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
-          <input matStartDate formControlName="start" placeholder="Start date">
-          <input matEndDate formControlName="end" placeholder="End date">
-        </mat-date-range-input>
-        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
-        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-date-range-picker #picker></mat-date-range-picker>
-        <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Не правильная начальная дата</mat-error>
-        <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Не правильная конечная дата</mat-error>
-      </mat-form-field>
-    </div>
-    <div class="component_form">
-      <button mat-raised-button type="button" (click)="Search()">Фильтр</button>
-    </div>
-  </form>
-  <div>
-    <div class="table-container" style="margin-left: 100px">
-      <div class="form-container" *ngFor="let order of orders">
-        <div>
-          <app-small-order [orderComponent]="order" [routerLink]="['open-order', order.id]"></app-small-order>
+<div *ngIf="!router.url.startsWith('/create-order')">
+  <div *ngIf="!router.url.startsWith('/open-order')" class="main">
+    <form class="side_panel">
+      <div class="component_form">
+        <mat-form-field appearance="fill">
+          <mat-label>Providers</mat-label>
+          <mat-select [(ngModel)]="selectedProvider" name="selectedProvider">
+            <mat-option *ngFor="let provider of providers" [value]="provider">
+              {{provider.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="component_form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Номер заказа</mat-label>
+          <input [(ngModel)]="filterRequest.number" name="number" matInput placeholder="Введите номер заказа">
+        </mat-form-field>
+      </div>
+      <div class="component_form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Имя элемента заказа</mat-label>
+          <input [(ngModel)]="filterRequest.productName" name="productName" matInput
+                 placeholder="Введите имя элемента заказа">
+        </mat-form-field>
+      </div>
+      <div class="component_form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Unit элемента заказа</mat-label>
+          <input matInput [(ngModel)]="filterRequest.unit" name="unit" placeholder="Введите Unit элемента">
+        </mat-form-field>
+      </div>
+      <div class="component_form">
+        <mat-form-field appearance="fill">
+          <mat-label>Enter a date range</mat-label>
+          <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+            <input matStartDate formControlName="start" placeholder="Start date">
+            <input matEndDate formControlName="end" placeholder="End date">
+          </mat-date-range-input>
+          <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+          <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Не правильная начальная дата
+          </mat-error>
+          <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Не правильная конечная дата</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="component_form">
+        <button mat-raised-button type="button" (click)="Search()">Фильтр</button>
+      </div>
+    </form>
+    <div>
+      <div class="table-container" style="margin-left: 100px">
+        <div class="form-container" *ngFor="let order of orders">
+          <div>
+            <app-small-order style="cursor: pointer;" [orderComponent]="order"
+                             [routerLink]="['open-order', order.id]"></app-small-order>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="component_form add-button">
-      <button mat-raised-button style="background: lawngreen;" type="button">Добавить заказ</button>
+      <div class="component_form add-button">
+        <button mat-raised-button style="background: lawngreen;" type="button" [routerLink]="['create-order']">Добавить
+          заказ
+        </button>
+      </div>
     </div>
   </div>
 </div>

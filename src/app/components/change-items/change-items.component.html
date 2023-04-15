@@ -2,12 +2,12 @@
   <div class="data_input">
     <h1 class="data_item">Name:</h1>
     <mat-form-field class="example-form-field">
-      <mat-label>Clearable input</mat-label>
-      <input matInput type="text" [(ngModel)]="value3">
-      <button *ngIf="value3" class="mat-raised-button has-content" matSuffix mat-icon-button aria-label="Clear" (click)="value3=''">
+      <mat-label>Введите Name</mat-label>
+      <input matInput type="text" [(ngModel)]="item.name">
+      <button *ngIf="item.name" class="mat-raised-button has-content" matSuffix mat-icon-button aria-label="Clear" (click)="item.name=''">
         <mat-icon>close</mat-icon>
       </button>
-      <button *ngIf="!value3" class="mat-raised-button" matSuffix mat-icon-button aria-label="Clear">
+      <button *ngIf="!item.name" class="mat-raised-button" matSuffix mat-icon-button aria-label="Clear">
         <mat-icon>close</mat-icon>
       </button>
     </mat-form-field>
@@ -15,12 +15,12 @@
   <div class="data_input">
     <h1 class="data_item">Quantity:</h1>
     <mat-form-field class="example-form-field">
-      <mat-label>Clearable input</mat-label>
-      <input matInput type="text" [(ngModel)]="value4">
-      <button *ngIf="value4" class="mat-raised-button has-content" matSuffix mat-icon-button aria-label="Clear" (click)="value4=''">
+      <mat-label>Введите количество</mat-label>
+      <input matInput type="text" [(ngModel)]="item.quantity">
+      <button *ngIf="item.quantity" class="mat-raised-button has-content" matSuffix mat-icon-button aria-label="Clear" >
         <mat-icon>close</mat-icon>
       </button>
-      <button *ngIf="!value4" class="mat-raised-button" matSuffix mat-icon-button aria-label="Clear">
+      <button *ngIf="!item.quantity" class="mat-raised-button" matSuffix mat-icon-button aria-label="Clear">
         <mat-icon>close</mat-icon>
       </button>
     </mat-form-field>
@@ -28,12 +28,12 @@
   <div class="data_input">
     <h1 class="data_item">Unit:</h1>
     <mat-form-field class="example-form-field">
-      <mat-label>Clearable input</mat-label>
-      <input matInput type="text" [(ngModel)]="value5">
-      <button *ngIf="value5" class="mat-raised-button has-content" matSuffix mat-icon-button aria-label="Clear" (click)="value5=''">
+      <mat-label>Введите Unit</mat-label>
+      <input matInput type="text" [(ngModel)]="item.unit">
+      <button *ngIf="item.unit" class="mat-raised-button has-content" matSuffix mat-icon-button aria-label="Clear" (click)="item.unit=''">
         <mat-icon>close</mat-icon>
       </button>
-      <button *ngIf="!value5" class="mat-raised-button" matSuffix mat-icon-button aria-label="Clear">
+      <button *ngIf="!item.unit" class="mat-raised-button" matSuffix mat-icon-button aria-label="Clear">
         <mat-icon>close</mat-icon>
       </button>
     </mat-form-field>

@@ -1,7 +1,7 @@
 export interface Item{
-  id:number,
+  id:number | null,
   name:string,
-  quantity:string,
+  quantity:number | null,
   unit: string,
-  orderId:string
+  orderId:number
 }
